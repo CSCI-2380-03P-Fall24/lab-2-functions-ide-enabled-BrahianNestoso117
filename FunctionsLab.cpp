@@ -8,8 +8,6 @@ using namespace std; // making life easier so that we do not need to use std::ci
 // input : an array of int, the starting index of search, the ending point of searchspace
 // function: find the location (i.e index) of the smallest value of array in the given interval
 // Note that I don't want the smallest value
-
-
 int locateSmallest(int array[], int start, int end){
 	int smallestIndex = start; //use start value and create a variable that will serve to hold the smallest index
 	for (int i = start + 1; i <= end; i++) { // use a for loop to go over the array without including start
@@ -25,8 +23,12 @@ int locateSmallest(int array[], int start, int end){
 //     an int which is the starting index of search,
 //     an int which is the ending point of searchspace
 // function: Search in the array from given start to end index and replace the given target value with 1000
-void replaceVariable() {
-	return;
+int replaceVariable(int array[], int target, int start, int end) {
+		for (int i = start; i <= end; i++) {
+			if (array[i] == target)
+				target = 1000
+		} 
+	return target;
 }
 
 
