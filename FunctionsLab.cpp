@@ -11,7 +11,12 @@ using namespace std; // making life easier so that we do not need to use std::ci
 
 
 int locateSmallest(int array[], int start, int end){
-	return -1; // fix this!
+	int smallestIndex = start; //use start value and create a variable that will serve to hold the smallest index
+	for (int i = start + 1; i <= end; i++) { // use a for loop to go over the array without including start
+		if (array[i] < smallestIndex) // use an if statement to test if the given integer index is less than the current smallestIndex value
+			smallestIndex = i; // replaces the smallestIndex value if the statement is true.
+	}
+	return smallestIndex; // return the value of smallestIndex
 }
 
 //Write the function called replaceVariable in the given interval such that 
