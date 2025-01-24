@@ -57,5 +57,12 @@ void printArray(int array[], int size) {
 
 
 int sumOdds(int array[], int start, int end){
-	return -1;
+	int result = 0;
+	for (int i = start; i <= endl; i++) {
+		int number = array[i];
+		if (array[i] & 2 != 0) {
+			result+=array[i];
+		}
+	}
+	return result;
 }
