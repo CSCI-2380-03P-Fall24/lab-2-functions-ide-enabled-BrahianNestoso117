@@ -9,9 +9,9 @@ using namespace std; // making life easier so that we do not need to use std::ci
 // function: find the location (i.e index) of the smallest value of array in the given interval
 // Note that I don't want the smallest value
 int locateSmallest(int array[], int start, int end){
-	int smallestIndex = start; //use start value and create a variable that will serve to hold the smallest index
+	int smallestIndex = array[start]; //use start value and create a variable that will serve to hold the smallest index
 	for (int i = start + 1; i <= end; i++) { // use a for loop to go over the array without including start
-		if (array[i] < smallestIndex) // use an if statement to test if the given integer index is less than the current smallestIndex value
+		if (array[i] < array[smallestIndex]) // use an if statement to test if the given integer index is less than the current smallestIndex value
 			smallestIndex = i; // replaces the smallestIndex value if the statement is true.
 	}
 	return smallestIndex; // return the value of smallestIndex
@@ -38,7 +38,7 @@ int replaceVariable(int array[], int target, int start, int end) {
 //input: the array of integers and its size
 void printArray(int array[], int size) {
 	for(int i = 0; i <= size; i++)
-	std::cout << array[i] << " ";
+	cout << array[i] << " ";
 }
 
 
@@ -58,7 +58,7 @@ void printArray(int array[], int size) {
 
 int sumOdds(int array[], int start, int end){
 	int result = 0;
-	for (int i = start; i <= endl; i++) {
+	for (int i = start; i <= end; i++) {
 		if (array[i] & 2 != 0) {
 			result+=array[i];
 		}
