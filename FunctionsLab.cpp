@@ -26,7 +26,7 @@ int locateSmallest(int array[], int start, int end){
 int replaceVariable(int array[], int target, int start, int end) {
 		for (int i = start; i <= end; i++) {
 			if (array[i] == target)
-				array[i] = 1000
+				array[i] = 1000;
 		} 
 	return target;
 }
